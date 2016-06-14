@@ -1,0 +1,39 @@
+{
+  "variables": {
+    "aws_ami_id": "ami-c8a9baa2",
+    "aws_user": "ec2-user",
+    "aws_region": "us-east-1",
+    "aws_instance_type": "c4.large"
+  },
+  "builders": [
+    {
+      "access_key": "{{user `aws_access_key`}}",
+      "ami_name": "Windows-Demo-AMI2",
+      "associate_public_ip_address": true,
+      "communicator": "winrm",
+      "iam_instance_profile": "WindowsDemo",
+      "instance_type": "{{user `aws_instance_type`}}",
+      "region": "us-east-1",
+      "secret_key": "{{user `aws_secret_key`}}",
+      "security_group_id": "sg-552ce12e",
+      "source_ami": "{{user `aws_ami_id`}}",
+      "subnet_id": "subnet-64dec74c",
+      "tags": { "Name": "Windows Demo" },
+      "type": "amazon-ebs",
+      "user_data_file": "bootstrap-aws.txt",
+      "winrm_password": "ChangeMeN0w!123",
+      "winrm_timeout": "5m",
+      "winrm_username": "Administrator"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "powershell",
+      "scripts": [
+        "install_codedeploy.ps1",
+        "install_chef.ps1",
+        "setup_iis.ps1"
+      ]
+    }
+  ]
+}
