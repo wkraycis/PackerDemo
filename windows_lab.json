@@ -9,7 +9,7 @@
   "builders": [
     {
       "access_key": "{{user `aws_access_key`}}",
-      "ami_name": "Windows-Demo-AMI2",
+      "ami_name": "{{user `build_id`}}",
       "associate_public_ip_address": true,
       "communicator": "winrm",
       "iam_instance_profile": "WindowsDemo",
