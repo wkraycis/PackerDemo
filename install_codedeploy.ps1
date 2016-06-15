@@ -5,4 +5,4 @@ Read-S3Object -BucketName aws-codedeploy-us-east-1/latest -Key codedeploy-agent.
 Start-Process -Wait -FilePath c:\temp\codedeploy-agent.msi -WindowStyle Hidden
 
 Get-Service | Where-Object {$_.DisplayName -eq "CodeDeploy"}
-# Get-Service | Where-Object {$_.status -eq "running"}
+Get-Service | Where-Object {$_.status -eq "running"}
