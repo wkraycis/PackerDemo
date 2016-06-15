@@ -33,6 +33,7 @@
       "scripts": [
         "install_codedeploy.ps1",
         "install_chef.ps1",
+        "ListInstalledSoftware.ps1",
         "setup_iis.ps1"
       ]
     }
