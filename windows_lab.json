@@ -29,7 +29,7 @@
       "type": "amazon-ebs",
       "user_data_file": "bootstrap-aws.txt",
       "winrm_password": "ChangeMeN0w!123",
-      "winrm_timeout": "5m",
+      "winrm_timeout": "10m",
       "winrm_username": "Administrator"
     }
   ],
