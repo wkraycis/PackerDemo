@@ -5,9 +5,9 @@
     "aws_region": "us-east-1",
     "aws_instance_type": "t2.large",
     "build_id": "Windows-Demo-AMI-xxx",
-    "aws_security_group_id": "$PACKER_SG",
-    "aws_subnet_id": "$PACKER_SUBNET",
-    "aws_instance_iam_profile": "$INSTANCE_PROFILE"
+    "aws_security_group_id": "",
+    "aws_subnet_id": "",
+    "aws_instance_iam_profile": ""
 
   },
   "builders": [
