@@ -3,8 +3,12 @@
     "aws_ami_id": "ami-c8a9baa2",
     "aws_user": "ec2-user",
     "aws_region": "us-east-1",
-    "aws_instance_type": "c4.large",
-    "build_id": "Windows-Demo-AMI-xxx"
+    "aws_instance_type": "t2.large",
+    "build_id": "Windows-Demo-AMI-xxx",
+    "aws_security_group_id": "$PACKER_SG",
+    "aws_subnet_id": "$PACKER_SUBNET",
+    "aws_instance_iam_profile": "$INSTANCE_PROFILE"
+
   },
   "builders": [
     {
@@ -16,9 +20,9 @@
       "instance_type": "{{user `aws_instance_type`}}",
       "region": "us-east-1",
       "secret_key": "{{user `aws_secret_key`}}",
-      "security_group_id": "sg-552ce12e",
+      "security_group_id": "{{user `aws_security_group_id`}}",
       "source_ami": "{{user `aws_ami_id`}}",
-      "subnet_id": "subnet-64dec74c",
+      "subnet_id": "{{user `aws_subnet_id`}}",
       "tags": { "Name": "Windows Demo" },
       "type": "amazon-ebs",
       "user_data_file": "bootstrap-aws.txt",
