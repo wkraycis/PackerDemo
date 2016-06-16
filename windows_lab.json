@@ -7,7 +7,9 @@
     "build_id": "Windows-Demo-AMI-xxx",
     "aws_security_group_id": "",
     "aws_subnet_id": "",
-    "aws_instance_iam_profile": ""
+    "aws_instance_iam_profile": "",
+    "aws_access_key": "",
+    "aws_secret_key": ""
 
   },
   "builders": [
