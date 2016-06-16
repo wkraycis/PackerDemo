@@ -16,7 +16,7 @@
       "ami_name": "{{user `build_id`}}",
       "associate_public_ip_address": true,
       "communicator": "winrm",
-      "iam_instance_profile": "WindowsDemo",
+      "iam_instance_profile": "{{user `aws_instance_iam_profile`}}",
       "instance_type": "{{user `aws_instance_type`}}",
       "region": "us-east-1",
       "secret_key": "{{user `aws_secret_key`}}",
