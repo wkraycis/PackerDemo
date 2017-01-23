@@ -20,7 +20,7 @@
       "communicator": "winrm",
       "iam_instance_profile": "{{user `aws_instance_iam_profile`}}",
       "instance_type": "{{user `aws_instance_type`}}",
-      "region": "us-east-1",
+      "region": "{{user `aws_region`}}",
       "secret_key": "{{user `aws_secret_key`}}",
       "security_group_id": "{{user `aws_security_group_id`}}",
       "source_ami": "{{user `aws_ami_id`}}",
