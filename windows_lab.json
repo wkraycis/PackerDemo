@@ -2,7 +2,7 @@
   "variables": {
     "aws_ami_id": "ami-188d6e0e",
     "aws_user": "ec2-user",
-    "aws_region": "us-west-2",
+    "aws_region": "us-east-1",
     "aws_instance_type": "c4.large",
     "build_id": "Windows-Demo-AMI-xxx",
     "aws_security_group_id": "",
