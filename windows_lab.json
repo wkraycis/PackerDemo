@@ -30,7 +30,8 @@
       "user_data_file": "bootstrap-aws.txt",
       "winrm_password": "ChangeMeN0w!123",
       "winrm_timeout": "10m",
-      "winrm_username": "Administrator"
+      "winrm_username": "Administrator",
+      "disable_stop_instance": "true"
     }
   ],
   "provisioners": [
@@ -40,7 +41,8 @@
         "install_codedeploy.ps1",
         "install_chef.ps1",
         "ListInstalledSoftware.ps1",
-        "setup_iis.ps1"
+        "setup_iis.ps1",
+        "sysprep.ps1"
       ]
     }
   ]
